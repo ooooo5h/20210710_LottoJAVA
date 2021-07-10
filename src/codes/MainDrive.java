@@ -27,7 +27,7 @@ public class MainDrive {
 //				안내문구를 띄울껀데
 //				"?번째 숫자를 입력하세요."
 //				i번째 숫자라고 입력하면, 0부터 5까지 나오니까 i+1
-				System.out.print((i+1)+"번째 숫자를 입력하세요.");
+				System.out.print((i+1)+"번째 숫자를 입력하세요. : ");
 				
 //				일단 입력받은 숫자를 변수에 담아두고, 
 //				변수가 검사를 통과하면 배열에 넣을거야
@@ -51,9 +51,20 @@ public class MainDrive {
 					}
 				}
 				
-				
-				
-				
+//				검사 1,2 두개 모두 통과했다면 값에 넣어주고, 다음 숫자를 구하러 가자
+				if(isRangeOk && isDuplicateOk) {
+					myLottoNumbers[i] = inputNum;
+					break;
+				}
+//				else if(!=(isRangeOk && isDuplicateOk)) {  --> !=는 같지 않다! 아니다는 !
+				else if(!isRangeOk) {
+					System.out.println("1부터 45까지의 숫자를 입력하세요.");
+				}
+//				else if(!isDuplicateOk) {  --> 둘다 true / 범위만 false / 중복만 false / 범위,둘다 false
+//				                           --> 둘다 true / 범위만 false, 이면 나머지 하나의 경우수는 중복도 false인 경우
+				else {
+					System.out.println("이미 입력한 숫자입니다.");
+				}
 			}
 		}
 		
