@@ -44,6 +44,31 @@ public class MainDrive {
 			}
 		}
 		
+//		당첨번호를 작은숫자에서 큰 숫자 순서대로 정리해서 출력해보자
+		
+//		정리(정렬) 코드
+//		숫자 2개씩 비교해서 자리 바꾸기를 반복 => 작은 반복 (분침)
+//		6번 반복 => 큰 반복 (시침)
+		for(int i = 0; i < winLottoNumbers.length; i++) {
+			
+			for(int j = 0; j < winLottoNumbers.length-1 ; j++) {
+		
+				if(winLottoNumbers[j] == winLottoNumbers[j+1]) {
+					
+					int backUp = winLottoNumbers[j+1];
+					winLottoNumbers[j+1] = winLottoNumbers[j];
+					winLottoNumbers[j] = backUp;
+					
+				}
+				
+			}
+			
+		}
+		
+		
+		
+		
+//		출력은 OK
 		for(int num : winLottoNumbers) {
 			System.out.println(num);
 		}
