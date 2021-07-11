@@ -48,6 +48,30 @@ public class MainDrive {
 			System.out.println(num);
 		}
 		
+//		보너스번호도 뽑아보자 => 1~45 당첨번호와 겹치면 안됨
+		int bonusNum = 0;
+		
+		while(true) {
+			
+			int randomBonusNum = (int)(Math.random()*45+1);
+			
+			boolean isDuplOk = true;
+			
+			for(int winNum : winLottoNumbers) {
+				if(winNum == randomBonusNum) {
+					isDuplOk = false;
+					break;
+				}
+			}
+			
+			if(isDuplOk) {
+				bonusNum = randomBonusNum;
+				break;
+			}
+		}
+	
+		System.out.println("보너스번호 : " + bonusNum);
+		
 		
 		int[] myLottoNumbers = new int[6];
 		
