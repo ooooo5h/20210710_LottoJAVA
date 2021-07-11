@@ -125,6 +125,23 @@ public class MainDrive {
 			}
 		}
 		
+//		최종 결과에는 맞춘 개수가 저장되었고, 그 갯수가 몇개냐에 따라 등수를 정하기
+		if(correctNumCount == 6) {
+			System.out.println("1등입니다.");
+		}
+		else if(correctNumCount == 5) {
+			System.out.println("3등 입니다.");
+		}
+		else if(correctNumCount == 4) {
+			System.out.println("4등 입니다.");
+		}
+		else if(correctNumCount == 3) {
+			System.out.println("5등 입니다.");
+		}
+		else {
+			System.out.println("낙첨입니다.");
+		}
+		
 
 		
 			
